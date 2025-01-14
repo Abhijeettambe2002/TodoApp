@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="actions">
+    <h1 class="welcome">Welcome,</h1>
+        <input type="text" id="searchInput" onkeyup="searchTasks()" placeholder="Search for your tasks...">  
+        <a class="logout" href="{% url 'logout_page' %}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+    <p class="user-info">{{ request.user }}</p>
+
+</div>
+    <div class="add-event">
+        <a class= "addbutton" href="{% url 'add_event' %}"><i class="fas fa-plus-circle"></i> Add Event</a>
+    </div>
+    {% if has_events %}
+        {% for event in events %}
+            <div class="event">
+                <a href="{% url 'event_detail' event.id %}" class="event-title">
+                    <h2>{{ event.title }}</h2>
+                </a>
+                <div class="event-actions">
+                    <a href="{% url 'delete_event' event.id %}"><i class="fas fa-trash-alt"></i> Delete</a>
+                    <a href="{% url 'update_event' event.id %}"><i class="fas fa-edit"></i> Update</a>
+                    <input type="checkbox" class="task-done" data-id="{{ event.id }}" style="transform: scale(1.5);">
+
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="no-tasks">
+            <p>No tasks added yet. Start by adding your first task!</p>
+        </div>
+    {% endif %}
+    <script src="{% static 'js/style.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.actions a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #e7f1ff;
+    padding: 10px 15px;
+    border-radius: 100px;
+    background-color: #0056b3;
+    transition: background-color 0.3s, color 0.3s;
+}
+.actions a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.addbutton  {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #e7f1ff;
+    padding: 10px 15px;
+    border-radius: 100px;
+    background-color: #0056b3;
+    transition: background-color 0.3s, color 0.3s;
+}
+.addbutton:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.addbutton{
+    position:fixed;
+    bottom: 75px;
+    right: 80px;
+}
+
+.navbar {
+    background-color: #F0F2F5;
+}
+
+.navbar {
+    background-color: #F0F2F5;
+    border: 2px solid #DADDE1;
+    padding: 0px; 
+    position: relative;
+    bottom: 30px;
+    right: 6px;
+    width: 100%;
+
+}
+
+.logout{
+    position:relative;
+    top: 9px;
+    left: 400px;
+}
+#searchInput {
+    position:relative;
+    top: 10px;
+    left: 370px;
+    height: 37px;
+    width: 550px;
+    border-radius: 20px;
+}
+.welcome{
+    position:relative;
+    top: 9px;
+    left : 20px;
+}
+.user-info {
+    font-size: 1.2em;
+    position:relative;
+    left : 25px;
+    bottom: 20px;
+}
+.no-tasks {
+    font-size: 1.2em;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}

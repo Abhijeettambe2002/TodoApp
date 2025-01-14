@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>{{ event.title }}</h2>
+        <div class="event-actions">
+            <a href="{% url 'delete_event' event.id %}"><i class="fas fa-trash-alt"></i> Delete</a>
+            <a href="{% url 'update_event' event.id %}"><i class="fas fa-edit"></i> Update</a>
+        </div>
+        <p class="event-description">{{ event.description }}</p>
+        <p class="event-date">{{ event.date }}</p>
+        <a href="{% url 'main_page' %}" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+</body>
+</html>
