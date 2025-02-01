@@ -5,10 +5,9 @@ TodoApp is a Django-based web application designed to help users manage their ta
 ## Features
 
 - **User Registration and Authentication**: Secure user registration and login functionality.
-- **Task Management**: Add, update, and delete tasks/events.
+- **Task Management**: Add, update, and delete tasks.
 - **Search Functionality**: Search tasks by title.
 - **Task Completion**: Mark tasks as done.
-- **Responsive Design**: Mobile-friendly interface.
 
 ## Installation
 
@@ -60,7 +59,8 @@ TodoApp is a Django-based web application designed to help users manage their ta
 
 - **Register**: Create a new user account.
 - **Login**: Access your account using your credentials.
-- **Add Event**: Use the "Add Event" button to create a new task/event.
+- **Add Event**: Use the "Add Event" button to create a new task.
+- **Delete Event**: Use the "Delete Event" button to delete a  task.
 - **Manage Events**: View, update, or delete tasks/events from the main page.
 - **Search**: Use the search bar to filter tasks by title.
 - **Mark as Done**: Check the checkbox next to each task to mark it as done.
@@ -98,10 +98,8 @@ Contributions are welcome! Please follow these steps to contribute:
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
 
-For any inquiries or support, please contact [yourname@example.com](mailto:yourname@example.com).
+For any inquiries or support, please contact [abhijeettambe20@gmail.com](mailto:yourname@example.com).
